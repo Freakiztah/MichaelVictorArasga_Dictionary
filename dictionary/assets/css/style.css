@@ -1,0 +1,316 @@
+/* Remove horizontal scrollbar */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pushes footer to bottom */
+.wrapper {
+    flex: 1;
+}
+
+/* Navbar */
+nav {
+    background-image: url('/assets/images/banner.jpg');
+    background-size: 800px;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Logo */
+nav img {
+    width: auto;
+    height: auto;
+    max-height: 100px;
+    /* Prevent logo from shrinking */
+    flex-shrink: 0;
+}
+
+/* Navigation List */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    /* Align items to the right */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    /* Allows the menu to take up remaining space */
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Ensure list items align properly */
+.nav-menu li {
+    display: inline-block;
+}
+
+/* Link Styling */
+.nav-menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    /* Soft glowing shadow effect */
+    text-shadow: 2px 2px 5px rgba(22, 22, 22, 0.6);
+}
+
+/* Hover Effect */
+.nav-menu li a:hover {
+    background-color: rgb(240, 236, 33);
+    /* Custom text color */
+    color: rgb(36, 36, 36);
+    border-radius: 5px;
+    transform: scale(1.1);
+    /* Stronger shadow effect on hover */
+    text-shadow: 3px 3px 8px rgb(200, 255, 129);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-top: 60px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Logo Customization */
+.logo {
+    width: 100px;
+    height: auto;
+    max-width: 150px;
+}
+
+/* Centering the Form */
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 20px;
+    /* Light transparent background */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* Soft shadow for depth */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the Input Field */
+#searchTerm {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Styling the Submit Button */
+#searchButton {
+    width: 85%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    /* Gradient color */
+    background: linear-gradient(145deg, #ff7675, #d63031);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* Embossed effect */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+        -3px -3px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Hover Effect */
+#searchButton:hover {
+    /* Slight increase in size */
+    background: linear-gradient(145deg, #d63031, #ff7675);
+    transform: scale(1.05);
+}
+
+/* Button Active (Pressed) Effect */
+#searchButton:active {
+    /* Embossed pressed effect */
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+#definition {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    /* Center it on the page */
+    margin: 20px auto;
+    /* Set a maximum width */
+    max-width: 500px;
+    /* Center text inside */
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    /* Light background */
+    background-color: rgb(204, 255, 123);
+    /* Rounded corners */
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Mobile First Adjustments */
+@media (min-width: 768px) {
+    nav ul {
+        gap: 30px;
+    }
+
+    main input,
+    main button,
+    #definition {
+        width: 50%;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo-container {
+        /* Move logo to the top */
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    /* Hide menu by default */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Show menu when active */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    /* Header */
+    header {
+        margin-top: 50px;
+    }
+
+    header h1 {
+        /* Smaller title */
+        font-size: 1em;
+    }
+
+    .logo {
+        width: 50px;
+        max-width: 70px;
+    }
+
+    /* Form */
+    #searchForm {
+        max-width: 250px;
+        width: 90%;
+        padding: 20px 8px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    #searchTerm {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #searchButton {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #definition {
+        padding: 20px 8px;
+        font-size: 12px;
+    }
+
+    /* Footer */
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
