@@ -6,21 +6,25 @@ body {
 }
 
 body {
-    min-height: 100vh; /* Ensures body expands to full screen height */
+    /* Ensures body expands to full screen height */
+    min-height: 100vh; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #0d1117; /* Base background color */
+    /* Base background color */
+    background-color: #0d1117; 
     background: 
-        linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.7)), /* Adjust transparency */
+        /* transparency */
+        linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.7)), 
         url('/assets/images/booksbg.jpg') no-repeat center center fixed;
-    background-size: cover; /* Covers the full page */
+    background-size: cover; 
 }
 
 
 .wrapper {
-    flex: 1; /* Takes up all available space */
+    /* Takes up all available space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
