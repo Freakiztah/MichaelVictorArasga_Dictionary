@@ -215,6 +215,9 @@ header h1 {
 
 /* Footer - Now it stays at the bottom */
 footer {
+    background-image: url('/assets/images/banner.jpg');
+    background-size: 800px;
+    background-position: center;
     text-align: center;
     padding: 10px;
     background-color: #484848;
