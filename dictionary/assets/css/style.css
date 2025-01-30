@@ -136,6 +136,7 @@ header h1 {
     width: 100%;
     margin: 30px auto;
     padding: 20px;
+    height: 30vh;
     /* Light transparent background */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -153,6 +154,7 @@ header h1 {
     outline: none;
     margin-bottom: 15px;
     text-align: center;
+    height: 70px;
 }
 
 /* Styling the Submit Button */
@@ -313,21 +315,29 @@ footer {
 
     /* Form */
     #searchForm {
-        max-width: 250px;
+        max-width: 250px; /* Keep the width restriction */
         width: 90%;
         padding: 20px 8px;
-        margin: 20px auto;
+        margin: 0 auto; /* Center horizontally */
         text-align: center;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #searchTerm {
         font-size: 12px;
         padding: 6px;
+        height: 70px;
     }
 
     #searchButton {
         font-size: 12px;
         padding: 6px;
+        height: 40px;
+
     }
 
     #definition {
@@ -340,5 +350,6 @@ footer {
     footer {
         position: fixed;
         bottom: 0;
+        font-size: 10px;
     }
 }
